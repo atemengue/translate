@@ -1,0 +1,52 @@
+<!-- @format -->
+
+/** @format */ // le code snippet pour l'application speaker JS
+
+<!-- DIV CHECKBOX -->
+<div className="ui form">
+  <div className="inline fields">
+    <label>Samedi et Dimanche?</label>
+    <div className="field">
+      <div className="ui checkbox">
+        <input
+          type="checkbox"
+          name="samedi"
+          onChange="{handleChangeSaturday}"
+          checked="{speakingSaturday}"
+        />
+        <label>Samedi</label>
+      </div>
+    </div>
+    <div className="field">
+      <div className="ui checkbox">
+        <input
+          onChange="{handleChangeSunday}"
+          type="checkbox"
+          name="dimanche"
+          checked="{speakingSunday}"
+        />
+        <label>Dimanche</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- /DIV CHECKBOX -->
+
+<!-- MESSAGE COMPONENT -->
+export default function Message() { return (
+<div className="ui container">
+  <h3 className="ui header">Message</h3>
+  <form className="ui form">
+    <div className="field">
+      <label>Email</label>
+      <input type="text" name="first-name" placeholder="First Name" />
+    </div>
+    <div class="field">
+      <label>Message</label>
+      <textarea rows="2"></textarea>
+    </div>
+    <button className="ui button" type="submit">Envoyer le message</button>
+  </form>
+</div>
+); }
